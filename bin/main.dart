@@ -43,7 +43,11 @@ main() {
 // parameter, and adds another link to the end of the chain.  The new link
 // value should be the String parameter passed into the function.typedef
 String printValue (Link link String word){
-  //thinking of a way to define new parameter to the class. possible that i will submit again
+  for (x in link){
+    if (x.link.next == null)(
+      link.next  = link();
+    )
+  }
 }
 
 // *** Stretch ****
