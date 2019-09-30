@@ -7,13 +7,25 @@
 // like this:
 // https://s1.whiteboardfox.com/s/2ae37dc832647bad.png
 
+class Link {
+Link next;
+String value;
+}
 
 
 
 main() {
   // Exercise 2:  Create the object structure shown in the above link
   // including the variable called 'firstLink'
+  Link firstLink = Link();
+  firstLink.value = 'Raj';
+  firstLink.next = Link();
 
+  firstLink.next.value = 'Makiko';
+  firstLink.next.next = Link();
+
+  firstLink.next.next.value = 'Paul';
+  firstLink.next.next.next = null ;
 }
 
 
@@ -23,12 +35,16 @@ main() {
 // Raj
 // Makiko
 // Paul
-
+  String printValue (Link link){
+  print (link.value);
+  }
 
 // Exercise 4: Create a function which takes a Link parameter and a String
 // parameter, and adds another link to the end of the chain.  The new link
 // value should be the String parameter passed into the function.typedef
-
+String printValue (Link link String word){
+  //thinking of a way to define new parameter to the class. possible that i will submit again
+}
 
 // *** Stretch ****
 // Exercise 5: Create a function called insert which takes a Link,
