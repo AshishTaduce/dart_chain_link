@@ -52,15 +52,16 @@ main() {
 // value should be the String parameter passed into the function.typedef
 String linker (Link link ,String word) {
   var j = link;
-  while (j != null) {
+  while (j.next != null) {
 
     j = j.next;
 
-    if (j.next == null) {
-      j.next = link;
-      j.next.value = word;
-    }
+
   }
+
+    j.next = Link();
+    j.next.value = word;
+
 }
 
 // *** Stretch ****
