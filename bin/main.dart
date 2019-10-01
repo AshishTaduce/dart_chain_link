@@ -26,6 +26,10 @@ main() {
 
   firstLink.next.next.value = 'Paul';
   firstLink.next.next.next = null ;
+  printValue(firstLink);
+  linker(firstLink, 'Ashish');
+  print ('=======');
+  printValue(firstLink);
 }
 
 
@@ -35,18 +39,27 @@ main() {
 // Raj
 // Makiko
 // Paul
-  String printValue (Link link){
-  print (link.value);
-  }
+  Link printValue(link) {
+    var i = link;
+    while (i != null){
+      print (i.value);
+      i = i.next;
 
+    }
+  }
 // Exercise 4: Create a function which takes a Link parameter and a String
 // parameter, and adds another link to the end of the chain.  The new link
 // value should be the String parameter passed into the function.typedef
-String printValue (Link link String word){
-  for (x in link){
-    if (x.link.next == null)(
-      link.next  = link();
-    )
+String linker (Link link ,String word) {
+  var j = link;
+  while (j != null) {
+
+    j = j.next;
+
+    if (j.next == null) {
+      j.next = link;
+      j.next.value = word;
+    }
   }
 }
 
@@ -56,3 +69,7 @@ String printValue (Link link String word){
 // in the chain.  For example, calling insert(firstLink, 2, "A") should
 // update the chain structure to look like this:
 // https://s1.whiteboardfox.com/s/77ff03ee231f2f60.png
+
+
+
+
